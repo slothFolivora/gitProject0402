@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>產品細節(查看)</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        .banner {
+            height: 320px;
+            background-image: url(images/macaron/macaron02.jpg);
+        }
+        .box01{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">甜之家</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="sweet_index.html">首頁</a>
+
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sweet_about.html">公司介紹</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    服務項目
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">蛋糕</a></li>
+                  <li><a class="dropdown-item" href="#">麵包</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">甜甜圈</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" href="sweet_product.html">產品介紹</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <!-- input: 輸入欄 -->
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+    <div class="banner bg-info bg-cover"></div>
+    <div class="container">
+        <h2 class="text-danger fw-900 mt-3">|產品細節<small class="fw-100 text-muted">Details</small></h2>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="myimg bg-cover" style="background-image: url(images/cake_teacher/cake02.jpg); height: 480px;"></div>
+                <ul class="list-unstyled d-flex justify-content-between flex-nowrap overflow-auto" id="sweetlist">
+                    <li class="text-nowrap p-1 me-0">
+                        <div class="box01 bg-cover" style="background-image: url(images/cake_teacher/cake.jpg);"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h2>松露榛果巧克力蛋糕</h2>
+                <p>榛果巧克力的香濃與松露的深厚味道相融，絕對是巧克力控的極致享受</p>
+                <p>單價: NT$230/片</p>
+                <p>成份: 
+                    <span class="badge text-bg-danger">巧克力</span>
+                    <span class="badge text-bg-warning">榛果</span>
+                    <span class="badge text-bg-info">奶油</span>
+                </p>
+                <div class="mb-3">
+                    <label for="" class="form-label">數量</label>
+                    <input type="number" class="form-control" min="1" max="100">
+                </div>
+                <button class="btn btn-success w-100">確認</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer bg-dark text-white text-center fw-900 py-3 mt-5">
+        @甜之家 2023製作
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $.ajax({
+                type: "GET", 
+                url: "js/cake.json", 
+                success: showdata, 
+                error: function(){
+                    alert:("串接錯誤");
+                }
+            })
+        });
+
+        function showdata(data){
+            console.log(data);
+            $("#sweetlist").empty();
+            for(var i=0; i<10; i++){
+                var strHTML='<li class="text-nowrap p-1 me-0"><div class="box01 bg-cover" style="background-image: url(' + data[i].圖片路徑 + ');"></div></li>';
+                $("#sweetlist").append(strHTML);
+            }    
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>甜食</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        body{
+            /* border-image: url(images/cake.jpg); */
+            background-image: linear-gradient(45deg, var(--mushroom), var(--thatch_half)), url(images/macaron/macaron01.jpg);
+            /* background-image: linear-gradient(45deg,var(--mushroom),var(--thatch)),url(images/cake.jpg); */
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            /*
+            background-image: linear-gradient(, , ), url();可形成線性漸層效果
+            45deg: 45
+            background-repeat: no-repeat;因為一般圖篇隨螢幕放大而重複排列
+            background-attachment: fixed;先固定背景圖
+            background-size: cover;讓背景圖片隨照螢幕放大而放大
+            */
+        }
+        .text01{
+            font-weight: 900;
+            background-color: var(--blackberry);
+            color: var(--bubblegum01);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 8px 2px var(--steel_pink);
+            margin-top: 10%;
+        }
+
+        .textcolor01{
+          color: var(--bone);
+        }
+        .textcolor02{
+          color: var(--baby_pink);
+        }
+        .textcolor03{
+          color: var(--light_pink);
+        }
+        .textcolor04{
+          color: var(--trick_me);
+        }
+        .textcolor05{
+          color: var(--coral);
+        }
+        .textcolor06{
+          color: var(--red_rose);
+        }
+
+        @media screen and (max-width: 768px){
+            body{
+                background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.7)), url(images/sweetcake03.jpg);
+            }
+            .text01{
+            font-size: 20px;
+            background-color: var(--mycolor07);
+            padding: 10px;
+            border-radius: 2px;
+            box-shadow: 2px 2px 8px 2px var(--mycolor06);
+            margin-top: 20%;
+        }
+        }
+
+        @media screen and (max-width:991px){
+            .box01{
+                width: 20vh;
+                height: 20%;
+            }
+        } 
+
+        /* @media screen and (min-width: 768px) and (max-width: 992px){
+            body{
+                background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.7)), url(images/sweetcake04.jpg);
+            }
+        } */
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <!--
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            navbar-dark: 代表選單是黑的，字要顯白  
+        -->
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">甜之家</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="sweet_index.html">首頁</a>
+                <!-- nav-link active: active會反白 -->
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="sweet_about.html">公司介紹</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  服務項目
+                </a>
+                <!-- Dropdown: 下拉式選單 -->
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">蛋糕</a></li>
+                  <li><a class="dropdown-item" href="#">麵包</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">甜甜圈</a></li>
+                </ul>
+              </li>
+              <!-- 
+                <li class="nav-item">
+                  <a class="nav-link disabled" aria-disabled="true">即將推出Disabled</a>
+                </li>
+                網頁功能前後不同時出現的寫法，ex: 會員登入、更新中 
+              -->
+              <li class="nav-item">
+                <a class="nav-link" href="sweet_product.html">產品介紹</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <!-- input: 輸入欄 -->
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row mb-5 position-relative" style="height:900px">
+            <div class="col-md-3 box01 position-absolute">
+                <div class="text01">
+                  <h1 class="textcolor01">01</h1>
+                  那種幫你一片同一包裝證件四個大全怎麼變得類似，植物辦公室研究。
+                </div>
+            </div>
+            <div class="col-md-3 box01 position-absolute start-50 translate-middle-x">
+                <div class="text01">
+                  <h1 class="textcolor02">02</h1>
+                  那種幫你一片同一包裝證件四個大全怎麼變得類似，植物辦公室研究。
+                </div>
+            </div>
+            <div class="col-md-3 box01 position-absolute end-0">
+                <div class="text01">
+                  <h1 class="textcolor03">03</h1>
+                  那種幫你一片同一包裝證件四個大全怎麼變得類似，植物辦公室研究。
+                </div>
+            </div>
+            <div class="col-md-3 box01 position-absolute top-50 start-50 translate-middle">
+                <div class="text01">
+                  <h1 class="textcolor04">04</h1>
+                  那種幫你一片同一包裝證件四個大全怎麼變得類似，植物辦公室研究。
+                </div>
+            </div>
+            <div class="col-md-3 box01 position-absolute bottom-0">
+                <div class="text01">
+                  <h1 class="textcolor05">05</h1>
+                  那種幫你一片同一包裝證件四個大全怎麼變得類似，植物辦公室研究。
+                </div>
+            </div>
+            <div class="col-md-3 box01 position-absolute bottom-0 end-0">
+                <div class="text01">
+                  <h1 class="textcolor06">06</h1>
+                  那種幫你一片同一包裝證件四個大全怎麼變得類似，植物辦公室研究。
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer bg-dark text-white text-center fw_900 m-auto py-2 fixed-bottom">
+      @甜之家 2023製作
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

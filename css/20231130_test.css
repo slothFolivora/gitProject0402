@@ -1,0 +1,40 @@
+
+body{
+    background-color: var(--mycolor02);
+}
+
+.wrapper{
+    width: 1024px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+.banner img{
+    width: 100%;
+}
+
+.banner nav{
+    background-color: var(--elephat);
+    text-align: center;
+}
+
+.banner nav ul{
+   display: inline-block;
+}
+
+.banner nav ul li{
+    list-style-type: none;
+    float: left;
+}
+
+.banner nav ul li a{
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #ffffff;
+    margin-right: 5px;
+}

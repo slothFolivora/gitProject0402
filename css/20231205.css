@@ -1,0 +1,176 @@
+
+body {
+    background-color: var(--mycolor02);
+    padding-top: 15px;
+}
+
+/*
+padding: 內距(與內容的距離)
+*/
+.wrapper {
+    width: 1024px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*
+margin: 外距(與其他區塊session的距離)
+可用第一字母縮寫自動編寫ex: "mt0" = "margin-top: 0"
+*/
+.banner nav {
+    background-color: var(--mycolor06);
+    text-align: center;
+}
+
+.banner nav ul {
+    display: inline-block;
+}
+
+/*
+inline: 橫向
+block: 格
+*/
+.banner nav ul li {
+    list-style-type: none;
+    float: left;
+}
+
+/*
+float: 浮動，把選單變橫+方向(從左或右開始)
+*/
+.banner nav ul li a {
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #ffffff;
+    margin-right: 5px;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+/*
+decoration: 底線
+font-weight: 字體粗細
+*/
+.banner nav ul li a:hover {
+    background-color: #80ffd4;
+}
+/*
+hover: 滑鼠游標選到，因此手機沒有此功能
+*/
+
+.sidebar{
+    background-color: #fff;
+    width: 250px;
+    height: 23vh;
+    float: left;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+/* 
+vh: device hight的%
+*/
+.sidebar nav ul li{
+    list-style-type: none;
+}
+.sidebar nav ul li a{
+    background-color: var(--mycolor01);
+    display: block;
+    width: 150px;
+    height: 60px;
+    text-align: center;
+    margin-top: 5px;
+    line-height: 60px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.sidebar nav ul li a:hover{
+    background-color: var(--mycolor02);
+    color: var(--thatch);
+}
+
+.content_in {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #faebd7;
+    margin-top: 10px;
+
+}
+
+.content_in h1 {
+    color: #dc143c;
+    text-align: center;
+}
+
+.content_in p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.content_in a {
+    display: block;
+    width: 120px;
+    height: 40px;
+    background-color: #000000;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 100;
+}
+
+/*
+line-height要跟height一樣高
+*/
+.content_in a:hover {
+    color: #a52a2a;
+    background-color: #6495ed;
+}
+
+.footer {
+    background-color: #a52a2a;
+    text-align: center;
+}
+
+.footer h1 {
+    font-style: 20px;
+    font-weight: bolder;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/*
+font-style: 調字體類型，主要是斜體等等變化
+font-family: 字型字體
+*/
+@media screen and (max-width: 1024px) {
+    .wrapper {
+        width: 90%;
+    }
+    .sidebar{
+        width: 90%;
+        height: auto;
+        text-align: center;
+    }
+    .sidebar ul{
+        display: inline-block;
+    }
+    .sidebar ul li{
+        float: left;
+        margin-right: 5px;
+    }
+}
+/*
+(裡面是條件)
+style是CSS要在HTML的寫法設定
+*/
